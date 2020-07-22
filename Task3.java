@@ -1,14 +1,9 @@
 public class Task3 {
     public static void main(String[] args) {
         String st = "Задача1";
-        char[] ch  = st.toCharArray();
-        char b = 0;
-        for (int i = 0; i < ch.length/2; i++ ){
-            b = ch[i];
-            ch[i] = ch[ch.length -1-i];
-            ch[ch.length -1-i] = b;
-        }
-        System.out.println(new String(ch));
+        StringBuilder st_b = new StringBuilder(st);
+        st = st_b.reverse().toString();
+        System.out.println(st);
     }
 }
 
